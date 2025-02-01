@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="images/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="function.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Wear - Home</title>
+    
+
+</head>
+<nav> <ul>
+    <a href="home.html"><img src="images/shortcut.png"></a>
+</ul>
+    <a href="home.html">Home</a>
+	<a href="Q&A.html">Q&A Forum</a>
+	<a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+
+    <div class="search-container">
+        <input type="text" placeholder="Looking for something specific?" class="search-input">
+        <button type="submit" class="search-btn">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+    
+    </nav>
+    <header>
+<p>Fashion Wear</p> 
+<div class="b1"><a href="about.html"><button><b>About Us</b></button></a>
+</div>
+</header>
+<body>  
+    <div class="ah2"><br><br>
+      <div class="slider-container">
+    
+    <div class="slider">
+        <img src="images/HI1.png" class="slider-image" alt="Image 1">
+        <img src="images/HI2.png" class="slider-image" alt="Image 2">
+        <img src="images/HI3.png" class="slider-image" alt="Image 3">
+        <img src="images/HI4.png" class="slider-image" alt="Image 4">
+    </div>
+    <div class="arrow left-arrow" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
+    </div><br><br><br><br>
+    <div class="recommendation-section">
+        <h2>Top Picks</h2>
+        <div class="items-container">
+            <div class="item-card">
+                <img src="images/GymFit (top).jpg" alt="Gym Wear Pack of 3">
+                <h3>BUYJA - Gym Tshirt Pack of 2</h3>
+                <p>Available Size - S, M, L, XL, XXL</p>
+                <div class="price">₹899</div>
+                <button class="add-button" data-item-id="1" onclick="setupAddToCartButtons()">Add To Cart</button>
+            </div>
+            <div class="item-card">
+                <img src="images/Formals.png" alt="Cold Brew Black">
+                <h3>Fashion Wear - Formal Shirts Pack of 6</h3>
+                <p>Available Size - S, M, L, XL</p>
+                <div class="price">₹2699.99</div>
+                <button class="add-button" data-item-id="2" onclick="setupAddToCartButtons()">Add To Cart</button>
+            </div>
+            <div class="item-card">
+                <div class="adj"><img src="images/TD1.png" alt="Tall Java Chip Frappuccino"></div>
+                <h3>Fashion Wear - Men's Track Suit</h3>
+                <p>Available Size - S, M, L, XL, XXL</p>
+                <div class="price">₹869</div>
+                <button class="add-button" data-item-id="3" onclick="setupAddToCartButtons()">Add To Cart</button>
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <div class="recommendation-section">
+        <h2>Top Deals</h2>
+        <div class="items-container">
+            <div class="item-card">
+                <div class="adj3"><img src="images/OOTD.png" alt="Outfit"></div>
+                <h3>Fashion Wear - Men's Outfit</h3>
+                <p>Available Size - S, M, L, XL</p>
+                <div class="price">₹1499</div>
+                <button class="add-button" data-item-id="4" onclick="setupAddToCartButtons()">Add Item</button>
+            </div>
+            <div class="item-card">
+                <div class="adj3"><img src="images/OST.png" alt="Black OS Tshirt"></div>
+                <h3>Fashion Wear - Black OverSized Tshirt</h3>
+                <p>Available Size - S, M, L, XL</p>
+                <div class="price">₹1199</div>
+                <button class="add-button" data-item-id="5" onclick="setupAddToCartButtons()">Add Item</button>
+            </div>
+            <div class="item-card">
+                <div class="adj3"><img src="images/OST2.png" alt="Itachi backprint OS Tshirt"></div>
+                <h3>Fashion Wear - Itachi backprint OS Tshirt</h3>
+                <p>Available Size - S, M, L, XL</p>
+                <div class="price">₹798</div>
+                <button class="add-button" data-item-id="6" onclick="setupAddToCartButtons()">Add Item</button>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+    <div class="vidcon">
+        <h2>Explore Our Website</h2>
+        <div class="video"> 
+            <video width="90%" autoplay loop muted>
+                <source src="images/video.mp4" type="video/mp4">
+            </video><br><br><br>
+        </div>
+    </div><br><br><br>
+    </div>
+</body>
+<footer class="hidden-footer">
+    <div class="af1">
+        <a href="home.html"><img src="images/shortcut.png"></a>
+        <ul class="l1">
+            <li><a href=""><h3>About Us</h3></a></li>
+            <li><a href="about.html" class="hov">Mission</a></li>
+            <li><a href="about.html" class="hov">Vision</a></li>
+            <li><a href="about.html" class="hov">History</a></li>
+            <li><a href="about.html" class="hov">Principles</a></li>
+        </ul>
+        <ul class="l2">
+            <li><a href=""><h3>Responsibility</h3></a></li>
+            <li><a href="diversity.html" class="hov">Diversity</a></li>
+            <li><a href="community.html" class="hov">Community</a></li>
+            <li><a href="eth.html" class="hov">Ethical Sourcing</a></li>
+            <li><a href="learn-more.html" class="hov">Learn More</a></li>
+              
+        </ul>
+        <ul class="l3">
+            <li><a href=""><h3>Quick Links</h3></a></li>
+            <li><a href="priv-policy.html" class="hov">Privacy Policy</a></li>
+            <li><a href="Fashion Wear Guide.pdf" class="hov">User Guide</a></li>
+            <li><a href="locations.html" class="hov">Locations</a></li>
+            <li><a href="terms.html" class="hov">Terms</a></li> 
+            <li><a href="FAQ.html" class="hov">FAQ</a></li>
+        </ul>
+        <ul class="smimg3">
+            <li><h3>Social Media</h3>
+            <img class="im1" src="images/instagram.png">
+            <img class="im2" src="images/facebook.png">
+            <img class="im3" src="images/twitter.png"></li>
+        </ul>
+    </div>
+    <p class="mmm">&copy; 2024 Fashion Wear from Mayuresh Chaubal</p>
+</footer>
+</html>

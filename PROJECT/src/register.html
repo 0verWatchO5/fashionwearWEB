@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="images/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="function.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Wear - Sign Up</title>
+</head>
+<header>
+    <p class="fph">Fashion Wear</p> 
+
+    </header>
+<body>
+    <div class="image-overlay">
+        <div class="align">
+            <div class="login-container">
+                <h2>FASHION WEAR</h2>
+                <p class="p12">Sign up to continue shopping</p> 
+                <form>
+                    <div class="agn-content">
+                        <input type="text" placeholder="First and last name" required/>
+                        <input type="text" placeholder="Phone Number" required/> 
+                        <input type="text" placeholder="Email Address" required/>
+                        <input type="password" placeholder="Create Password" id="typepass" required/>
+                        <div class="adrs">
+                            <textarea type="text" size="100"  rows="3" placeholder="Address...." required></textarea>
+                        </div> 
+                        <div class="show-pass">
+                            <input type="checkbox" onclick="Toggle()"><label> Show Password</label>
+                        </div>
+                        <div class="rgsbt">
+                            <button onclick="checkPassword()">Create Account</button>
+                            <p id="validationMessage"></p>
+                            <script>
+                                function checkPassword() {
+                                    const password = document.getElementById('typepass').value;
+                                    const message = validatePassword(password);
+                                    document.getElementById('validationMessage').textContent = message;
+                                }
+                            </script>
+                        
+                            <p class="p12">By creating an account you accept to<br> our <a href="terms.html"><span>Terms and Conditions</span></a> </p>
+                        </div>
+                    </div>
+                </form>
+            </div>      
+            <div class="l2-cont">
+                <p>Have an account?<a href="login.html"><b> Login</b></a></p>
+            </div>
+        </div>
+</body>
+<footer>
+    <div class="foot-nav">
+        <nav> 
+            <ul><b>
+                <a href="about.html"><li><p>About</p></li></a>       
+                <a href="terms.html"><li><p>Terms</p></li></a>    
+                <a href="priv-policy.html"><li><p>Privacy Policy</p></li></a>
+                <a href="locations.html"><li><p>Locations</p></li></a>
+                <a href="learn-more.html"><li><p>Learn More</p></li></a></b>
+            </ul>
+        </nav>
+            <p class="foot-cent">&copy; 2024 Fashion Wear from Mayuresh Chaubal</p>
+    </div>
+</footer>
+</div>
+</html>

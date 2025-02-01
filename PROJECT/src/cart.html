@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="x-icon" href="images/shortcut.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="function.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+</head>
+<nav>
+    <ul>
+        <a href="home.html"><img src="images/shortcut.png"></a>
+    </ul>
+    <a href="home.html">Home</a>
+    <a href="Q&A.html">Q&A Forum</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="cart.html">Cart</a>
+
+</nav>
+<header>
+    <p>Your Cart</p> 
+    </header>
+<body>
+    <div class="ah2">  
+            <br><br><div class="cart-container">
+                <div id="cart-items-container">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                <div class="cart-summary">
+                    <h3 id="total-price">Total: ₹0</h3>
+                    <button onclick="checkout()">Proceed to Checkout</button>
+                </div>
+            </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartContainer = document.getElementById('cart-items-container');
+        let totalPrice = 0;
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            cart.forEach(item => {
+                // Create elements for each item and append them to the cart container
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+
+                itemElement.innerHTML = `
+                    <img src="${item.imageSrc}" alt="${item.name}">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>Price: ${item.price}</p>
+                        <p>Sizes: ${item.sizes}</p>
+                    </div>
+                `;
+
+                cartContainer.appendChild(itemElement);
+
+                // Calculate total price
+                const itemPrice = parseFloat(item.price.replace('₹', ''));
+                totalPrice += itemPrice;
+            });
+
+            document.getElementById('total-price').innerText = `Total: ₹${totalPrice}`;
+        }
+    });
+
+    function checkout() {
+        alert('Proceeding to checkout...');
+        // Add your checkout logic here
+        localStorage.removeItem('cart'); // Clear cart after checkout
+    }
+</script>
+    </div>
+</body>
+
+</html>
